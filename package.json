@@ -23,7 +23,7 @@
     "build": "vue-tsc && vite build",
     "build-watch": "vue-tsc && vite build --watch",
     "preview": "vite preview",
-    "docs-dev": "pnpm --filter @vueno/docs run docs:dev "
+    "docs:build": "pnpm  build && pnpm --filter @vueno/docs build"
   },
   "dependencies": {
     "vue": "^3.2.45"

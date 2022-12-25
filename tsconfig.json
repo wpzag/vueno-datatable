@@ -13,7 +13,7 @@
     "skipLibCheck": true,
     "noImplicitAny": false,
     "noEmit": true,
-    "types": ["unplugin-vue-macros/macros-global" /* ... */],
+
     "paths": {
       "@/*": ["./src/*"]
     }
