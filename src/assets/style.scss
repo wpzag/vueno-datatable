@@ -1,0 +1,102 @@
+// reset
+:root {
+  --vn-divider-color: RGB(228, 230, 239);
+  --vn-thead-color: transparent;
+  --vn-even-tr-color: transparent;
+  --vn-dark-bg: rgb(227, 227, 227);
+  --vn-thead-text-color: rgb(75, 85, 99);
+  --vn-body-text-color: rgb(75, 85, 99);
+  --vn-border-style: solid;
+}
+:root.dark {
+  --vn-divider-color: rgba(64, 64, 64, 0.65);
+  --vn-thead-color: transparent;
+  --vn-even-tr-color: transparent;
+  --vn-dark-bg: rgba(28, 25, 23);
+  --vn-thead-text-color: rgb(229, 231, 235);
+  --vn-body-text-color: rgb(229, 231, 235);
+}
+.vn-striped {
+  --vn-even-tr-color: rgba(208, 208, 208, 0.1);
+}
+.vn-border-dashed {
+  --vn-border-style: dashed;
+  th,
+  td,
+  tr {
+    border-left: 0 !important;
+    border-right: 0 !important;
+  }
+  thead {
+    tr:first-child {
+      th {
+        border-top: 0 !important;
+      }
+      border-top: 0 !important;
+    }
+  }
+  tbody {
+    tr:last-child {
+      td {
+        border-bottom: 0 !important;
+      }
+      border-bottom: 0 !important;
+    }
+  }
+}
+.dark .vn-striped {
+  --vn-even-tr-color: rgba(96, 96, 96, 0.1);
+}
+.vn-datatable {
+  @apply text-slate-7 dark:text-slate-3;
+  button {
+    @apply border-0 bg-transparent;
+  }
+
+  table {
+    @apply block overflow-x-auto border-collapse break-words relative lt-lg:hidden;
+
+    tr,
+    th,
+    td {
+      @apply border  border-[var(--vn-divider-color)];
+      background-clip: padding-box;
+      border-style: var(--vn-border-style);
+    }
+
+    thead {
+      @apply relative;
+      tr {
+        th {
+          @apply py-5 px-3 relative bg-[var(--vn-thead-color)];
+          button {
+            @apply inline-flex items-center  font-medium uppercase text-sm text-[var(--vn-thead-text-color)];
+            .vn-sort-icon {
+              @apply w-5 mx-1 flex justify-center;
+            }
+          }
+        }
+      }
+    }
+
+    tbody {
+      @apply text-[var(--vn-body-text-color)];
+      tr:nth-child(2n) {
+        @apply bg-[var(--vn-even-tr-color)];
+      }
+      td {
+        @apply py-5 px-3;
+      }
+    }
+  }
+
+  footer {
+    @apply flex justify-between  items-center pb-7 pt-4;
+    select {
+      @apply border-[var(--vn-divider-color)]  bg-gray-100 border-0 px-3 py-2 rounded dark:bg-stone-9 dark:text-slate-300;
+    }
+    .vn-navigation-btn {
+      @apply border-0 text-slate-400 bg-[var(--vn-dark-bg)] rounded-lg p-2 transition duration-300 transition-all;
+    }
+  }
+}

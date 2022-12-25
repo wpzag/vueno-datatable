@@ -1,0 +1,64 @@
+import { fileURLToPath } from 'url'
+import Container from 'markdown-it-container'
+import Unocss from 'unocss/vite'
+import { defineConfig } from 'vitepress'
+
+export default defineConfig({
+  title: 'Vueno',
+  description: 'Awesome unocss library !',
+
+  themeConfig: {
+    siteTitle: 'Vueno',
+    nav: [
+      { text: 'Guide', link: '/guide' },
+      { text: 'Configs', link: '/configs' },
+      { text: 'Changelog', link: 'https://github.com/' },
+    ],
+    sidebar: [
+      {
+        text: 'Components',
+        items: [
+          { text: 'Styles', link: '/styles' },
+          { text: 'Input', link: '/inputs' },
+        ],
+      },
+    ],
+  },
+  markdown: {
+    theme: 'dracula',
+    config: (md) => {
+      md.use(Container, 'card', {
+        render: (tokens, idx) => {
+          const token = tokens[idx]
+          const title = token.info.trim().slice(5).trim()
+          const titleHtml = md.render(`## ${title}`)
+
+          return token.nesting === 1 ? `<Card>${titleHtml}` : '</Card>\n'
+        },
+      })
+
+      md.use(Container, 'code', {
+        render: (tokens, idx) => {
+          const token = tokens[idx]
+          const demoName = token.info.trim().slice(5).trim()
+
+          return token.nesting === 1
+            ? `<template #demo><${demoName} /></template><template #code>`
+            : '</template>\n'
+        },
+      })
+    },
+  },
+  vite: {
+    resolve: {
+      alias: {
+        '@': fileURLToPath(new URL('./docs', import.meta.url)),
+      },
+    },
+    plugins: [
+      Unocss({
+        configFile: '../../unocss.config.js',
+      }),
+    ],
+  },
+})

@@ -1,0 +1,38 @@
+# Prettier Configuration
+
+# Basic configuration options for Prettier.
+# For a full list of options, see:
+# https://prettier.io/docs/en/configuration.html
+
+# The default value for each option is listed in comments.
+
+# Use single quotes instead of double quotes.
+singleQuote: true
+
+# Print spaces between brackets in object literals.
+bracketSpacing: true
+
+# Print semicolons at the ends of statements.
+semi: false
+
+# Use 2 spaces for indentation.
+tabWidth: 2
+
+# Print trailing commas wherever possible when multi-line.
+trailingComma: 'es5'
+
+# Do not print spaces between brackets in JSX.
+jsxBracketSameLine: false
+
+# Use 'flow' syntax for type annotations, rather than 'TypeScript'.
+# (This only affects type annotations, not type declarations.)
+flowQuoteMarkers: true
+
+# Set the default parser for certain file types.
+# By default, Prettier will automatically detect the parser for each file.
+# However, you can override this behavior by specifying the parser here.
+# For a full list of supported parsers, see:
+# https://prettier.io/docs/en/options.html#parser
+overrides:
+  - files: '*.vue'
+    parser: 'vue'
