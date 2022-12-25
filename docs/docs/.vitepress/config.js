@@ -4,8 +4,8 @@ import Unocss from 'unocss/vite'
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: 'Vueno',
-  description: 'Awesome unocss library !',
+  title: 'Vueno Datatable',
+  description: 'Awesome vue 3 datatable !',
 
   themeConfig: {
     siteTitle: 'Vueno',
@@ -16,11 +16,15 @@ export default defineConfig({
     ],
     sidebar: [
       {
-        text: 'Components',
+        text: 'Guide',
         items: [
-          { text: 'Styles', link: '/styles' },
-          { text: 'Input', link: '/inputs' },
+          { text: 'Introduction', link: '/introduction' },
+          { text: 'Getting started', link: '/getting-started' },
         ],
+      },
+      {
+        text: 'Basic',
+        items: [{ text: 'Styles', link: '/styles' }],
       },
     ],
   },
