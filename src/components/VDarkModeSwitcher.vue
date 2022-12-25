@@ -7,7 +7,7 @@ const toggleDark = useToggle(isDark)
 <template>
   <button
     @click="toggleDark()"
-    class="fixed z-50 top-20 right-20 dark:text-white border-0 bg-transparent"
+    class="fixed z-50 top-10 right-20 dark:text-white border-0 bg-transparent"
   >
     <i inline-block align-middle i="dark:carbon-moon carbon-sun" />
 

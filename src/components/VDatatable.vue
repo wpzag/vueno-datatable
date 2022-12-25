@@ -50,7 +50,7 @@ const slots = useSlots()
     class="vn-datatable"
     :class="{ 'vn-striped': striped, 'vn-border-dashed': borderDashed }"
   >
-    <VTableCards class="lg:hidden">
+    <VTableCards>
       <template v-for="field in Object.keys(slots)" v-slot:[field]="{ item }">
         <slot :name="field" :item="item" />
       </template>

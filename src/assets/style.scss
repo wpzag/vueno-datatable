@@ -91,12 +91,24 @@
   }
 
   footer {
-    @apply flex justify-between  items-center pb-7 pt-4;
+    @apply flex justify-between  items-center pb-7 pt-4 mx-2;
     select {
-      @apply border-[var(--vn-divider-color)]  bg-gray-100 border-0 px-3 py-2 rounded dark:bg-stone-9 dark:text-slate-300;
+      @apply appearance-none  border-[var(--vn-divider-color)]  bg-gray-100 border-0  px-3 pr-6 py-2 rounded-lg dark:bg-stone-9 dark:text-slate-300;
     }
     .vn-navigation-btn {
       @apply border-0 text-slate-400 bg-[var(--vn-dark-bg)] rounded-lg p-2 transition duration-300 transition-all;
+    }
+  }
+}
+.vn-cards-wrapper {
+  @apply grid grid-cols-1 sm:grid-cols-2 gap-4 lg:hidden;
+  .vn-card {
+    @apply bg-white shadow dark:bg-stone-9 p-5 rounded-lg space-y-5 overflow-hidden;
+    .vn-card-label {
+      @apply text-gray-400 dark:text-gray-500 mb-4;
+    }
+    .vn-card-value {
+      @apply text-gray-700 dark:text-gray-200;
     }
   }
 }

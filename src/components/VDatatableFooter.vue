@@ -9,21 +9,32 @@ const isLastPage = computed(() => pagination.page === pagination.lastPage)
 <template>
   <footer>
     <div>
-      <select
+      <div
+        relative
         v-if="
           typeof props.perPage === 'object' && props.perPage.options.length > 1
         "
-        :value="pagination.rowsPerPage"
-        @change="
-          updatePerPage(
-            parseInt(($event?.target as HTMLSelectElement)?.value ?? 10)
-          )
-        "
       >
-        <option v-for="item in props.perPage.options" :key="item" :value="item">
-          {{ item }}
-        </option>
-      </select>
+        <div class="absolute inset-y-0 right-0 flex items-center h-full">
+          <div class="i-carbon-chevron-down text-sm mr-2"></div>
+        </div>
+        <select
+          :value="pagination.rowsPerPage"
+          @change="
+            updatePerPage(
+              parseInt(($event?.target as HTMLSelectElement)?.value ?? 10)
+            )
+          "
+        >
+          <option
+            v-for="item in props.perPage.options"
+            :key="item"
+            :value="item"
+          >
+            {{ item }}
+          </option>
+        </select>
+      </div>
     </div>
 
     <div class="flex gap-1 items-center">

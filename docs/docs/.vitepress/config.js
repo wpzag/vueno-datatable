@@ -24,7 +24,14 @@ export default defineConfig({
       },
       {
         text: 'Basic',
-        items: [{ text: 'Styles', link: '/styles' }],
+        items: [
+          { text: 'Styles', link: '/styles' },
+          { text: 'Sorting', link: '/sorting' },
+        ],
+      },
+      {
+        text: 'Advanced',
+        items: [{ text: 'Custom Slots', link: '/custom-slots' }],
       },
     ],
   },
