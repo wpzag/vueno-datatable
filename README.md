@@ -16,4 +16,4 @@ Overall, Vueno DataTable is a versatile and powerful component that can help you
 
 ## Installation 🛠️
 
-Please refer to the [Docs](https://main--genuine-chaja-8dd413.netlify.app/)
+Please refer to the [Docs](https://vueno.netlify.app/)

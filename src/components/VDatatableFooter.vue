@@ -15,7 +15,9 @@ const isLastPage = computed(() => pagination.page === pagination.lastPage)
           typeof props.perPage === 'object' && props.perPage.options.length > 1
         "
       >
-        <div class="absolute inset-y-0 right-0 flex items-center h-full">
+        <div
+          class="absolute inset-y-0 right-0 flex items-center h-full pointer-events-none"
+        >
           <div class="i-carbon-chevron-down text-sm mr-2"></div>
         </div>
         <select

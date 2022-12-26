@@ -1,3 +1,3 @@
-# Docs
+# Vueno DataTable
 
-This is a blank page
+`index.md` (wip)

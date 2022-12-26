@@ -1,34 +1,32 @@
 {
- "$schema": "https://raw.githubusercontent.com/JetBrains/web-types/master/schema/web-types.json",
- "framework": "vue",
- "name": "vueno-ui",
- "version": "2.34.2",
- "js-types-syntax": "typescript",
- "contributions": {
-   "html": {
-     "vue-components":[
-       {
-         "name": "VDatatable",
-         "description": "This is an awesome datatable.",
-         "doc-url": "https://www.deeeznuts.com",
-         "source": {
-           "symbol": "VDatatable"
-         },
-         "slots": [],
-         "attributes": [],
-         "props": [
-           {
-             "name": "color",
-             "doc-url": "https://www.naiveui.com/en-US/os-theme/components/affix",
-             "type": "string",
-             "description": "The scrolling element to listen scrolling.",
-             "default": "primary"
-           }
-
-         ]
-  
-       }
-     ]
-   }
- }
+  "$schema": "https://raw.githubusercontent.com/JetBrains/web-types/master/schema/web-types.json",
+  "framework": "vue",
+  "name": "vueno-ui",
+  "version": "2.34.2",
+  "js-types-syntax": "typescript",
+  "contributions": {
+    "html": {
+      "vue-components": [
+        {
+          "name": "VDatatable",
+          "description": "This is an awesome datatable.",
+          "doc-url": "https://www.deeeznuts.com",
+          "source": {
+            "symbol": "VDatatable"
+          },
+          "slots": [],
+          "attributes": [],
+          "props": [
+            {
+              "name": "rows",
+              "doc-url": "https://www.naiveui.com/en-US/os-theme/components/affix",
+              "type": "array",
+              "description": "array or rows.",
+              "default": "[]"
+            }
+          ]
+        }
+      ]
+    }
+  }
 }
