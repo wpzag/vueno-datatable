@@ -1,7 +1,7 @@
 {
   "name": "vueno-datatable",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "module": "./dist/vueno-datatable.js",
   "main": "./dist/vueno-datatable.umd.cjs",
@@ -15,7 +15,8 @@
   "types": "./dist/types/main.d.ts",
   "files": [
     "dist",
-    "web-types.json"
+    "web-types.json",
+    "package.json"
   ],
   "web-types": "./web-types.json",
   "scripts": {
@@ -23,12 +24,14 @@
     "build": "vue-tsc && vite build",
     "build-watch": "vue-tsc && vite build --watch",
     "preview": "vite preview",
-    "docs:build": "pnpm  build && pnpm --filter @vueno/docs build"
+    "docs:build": "pnpm  build && pnpm --filter @vueno/docs build",
+    "release": "bumpp package.json"
   },
   "dependencies": {
     "vue": "^3.2.45"
   },
   "devDependencies": {
+    "bumpp": "^8.2.1",
     "@iconify/json": "^2.1.156",
     "@vitejs/plugin-vue": "^4.0.0",
     "@vueuse/core": "^9.8.2",
