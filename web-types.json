@@ -19,7 +19,7 @@
           "props": [
             {
               "name": "rows",
-              "doc-url": "https://www.naiveui.com/en-US/os-theme/components/affix",
+              "doc-url": "https://zagcenter.com/sorting.html",
               "type": "array",
               "description": "array or rows.",
               "default": "[]"

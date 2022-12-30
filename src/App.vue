@@ -125,6 +125,17 @@ const headers: DTHeader[] = [
     align: 'center',
   },
 ]
+
+const pagination = {
+  page: 1,
+  from: 1,
+  to: 2,
+  total: 12,
+  rowsPerPage: 12,
+  sortBy: null,
+  sortDirection: null,
+  lastPage: 12,
+}
 </script>
 <template>
   <div class="w-90% mx-auto mt-20">
@@ -134,6 +145,7 @@ const headers: DTHeader[] = [
       :rows="rows"
       class="font-sans"
       border-dashed
+      :pagination="pagination"
       :perPage="{
         default: 5,
         options: [5, 10, 15, 20, 25, 30, 35, 40, 45, 50],

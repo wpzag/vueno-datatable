@@ -1,4 +1,4 @@
-# Vueno DataTable ✨
+# Vueno DataTable ✨ (WIP)
 
 Vueno DataTable is a powerful Vue 3 component that allows you to display and manipulate large data sets with ease. It supports a variety of table styles and features, including:
 

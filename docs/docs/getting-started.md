@@ -30,6 +30,6 @@ createApp(App).mount('#app')
 
 It's done! 🥳
 
-## Now, Just refer to the component in your vue files:
+Now, Just refer to the component in your vue files:
 
 <<< @/components/BoxedTable.vue

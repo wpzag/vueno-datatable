@@ -29,6 +29,10 @@ const props = defineProps({
     type: String as PropType<DTProps['perPage']>,
     default: { default: 10, options: [10, 20, 30, 40, 50, 100] },
   },
+  pagination: {
+    type: Object as PropType<DTProps['pagination']>,
+    default: {},
+  },
 })
 
 const { pagination, goToNextPage, goToPrevPage, updatePerPage, sort } =
